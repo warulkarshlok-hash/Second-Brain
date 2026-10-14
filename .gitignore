@@ -5,12 +5,11 @@ node_modules/
 
 # Environment variables & secrets
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.env
-!*.env.example
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
 
 # Production build artifacts
 dist/
@@ -35,3 +34,5 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+
