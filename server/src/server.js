@@ -20,6 +20,11 @@ import userRoutes from './routes/userRoutes.js';
 dotenv.config();
 
 const app = express();
+
+// Trust Render's reverse proxy so rate limiting
+// can identify client IP addresses correctly.
+app.set('trust proxy', 1);
+
 const PORT = process.env.PORT || 5000;
 
 // Security Middleware
