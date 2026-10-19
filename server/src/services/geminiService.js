@@ -13,7 +13,7 @@ export const generateSummary = async ({ type, title, content, description, url }
   }
 
   try {
-    const model = gemini.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = gemini.getGenerativeModel({ model: 'gemini-3.8-flash' });
 
     const prompt = `
 You are an expert knowledge curator for a "Second Brain" digital vault.
@@ -67,7 +67,7 @@ export const generateTags = async ({ type, title, content, description, currentT
   }
 
   try {
-    const model = gemini.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = gemini.getGenerativeModel({ model: 'gemini-3.8-flash' });
 
     const prompt = `
 Generate 3 to 6 relevant, high-quality tags for an item in a personal knowledge vault (Second Brain).
@@ -162,7 +162,7 @@ export const queryUserBrain = async ({ query, userItems = [] }) => {
   }
 
   try {
-    const model = gemini.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = gemini.getGenerativeModel({ model: 'gemini-3.8-flash' });
 
     // Format context from user's vault items
     const contextPrompt = topMatches

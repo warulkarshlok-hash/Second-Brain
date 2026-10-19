@@ -19,7 +19,7 @@
   - **Articles**: Distraction-free reader view, word count, and estimated reading time.
   - **Notes & Ideas**: Markdown-enabled quick capture with copy-to-clipboard functionality.
 - **🤖 Google Gemini AI Intelligence**:
-  - **One-Click Summarizer**: Generates executive summaries and key takeaways using `gemini-1.5-flash`.
+  - **One-Click Summarizer**: Generates executive summaries and key takeaways using `gemini-3.8-flash`.
   - **Smart Tag Generator**: Automatically suggests relevant, contextual tags.
   - **"Ask My Brain" (RAG Semantic Retrieval)**: Ask questions in natural language and receive grounded answers synthesized directly from your personal knowledge vault, complete with clickable source citations.
 - **⚡ Modern SaaS UI & UX**:
@@ -217,7 +217,7 @@ ADMIN_EMAILS=admin@example.com,youremail@domain.com
 1. Visit [Google AI Studio](https://aistudio.google.com/).
 2. Click **Get API key** and create a new API key.
 3. Paste the key into `server/.env` as `GEMINI_API_KEY=AIzaSy...`.
-4. The application uses the `gemini-1.5-flash` model for high-speed summaries, tag extraction, and RAG semantic question answering.
+4. The application uses the `gemini-3.8-flash` model for high-speed summaries, tag extraction, and RAG semantic question answering.
 
 ---
 

@@ -156,9 +156,23 @@ export const LandingPage = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200/80 dark:border-slate-800 py-6 px-6 text-center text-xs text-slate-500 dark:text-slate-400">
-        <p>Second Brain • Built with React, Vite, Tailwind CSS, Express, MongoDB, Auth0 & Google Gemini</p>
-      </footer>
+
+<footer className="border-t border-slate-200/80 dark:border-slate-800 py-6 px-6 text-center text-xs text-slate-500 dark:text-slate-400">
+  <p>
+    Second Brain • Built with React, Vite, Tailwind CSS, Express,
+    MongoDB, Auth0 & Google Gemini
+  </p>
+
+
+<p className="mt-3 text-base">
+  Made with <span className="text-red-500 text-lg">❤️</span> by{" "}
+  <span className="font-bold text-slate-700 dark:text-slate-200">
+    Shlok
+  </span>
+</p>
+
+</footer>
+
     </div>
   );
 };
