@@ -2,13 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const clientDist = path.resolve(__dirname, '../../client/dist');
+
 import { connectDB, isDbConnected, isMemoryStoreActive } from './config/db.js';
 import { isGeminiConfigured } from './config/gemini.js';
 import { seedInitialMemoryData } from './services/storeService.js';
@@ -99,12 +95,7 @@ app.use('/api/*', (req, res) => {
 });
 
 // Serve static frontend assets
-app.use(express.static(clientDist));
 
-// Wildcard SPA route
-app.get('*', (req, res) => {
-  res.sendFile(path.join(clientDist, 'index.html'));
-});
 
 // Centralized error handling
 app.use(errorHandler);
